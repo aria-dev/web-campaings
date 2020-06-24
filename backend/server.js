@@ -20,6 +20,12 @@ app.get("/events", (req, res) => {
     });
 });
 
+app.get("/latest", (req, res) => {
+    Event.find().sort({ $natural: -1 }).limit(1).then((result) => {
+        res.send(result);
+    });
+});
+
 app.post("/delete/event:eventname", (req, res)=>{
   console.log("No worries, we will delete "  + req.params.eventname);
 });

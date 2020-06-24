@@ -8,7 +8,7 @@ import { Event } from '../model/Event.model';
     providedIn: 'root'
 })
 export class EventsService {
-    private eventsUrl = 'http://localhost:8080';
+    private eventsUrl = 'https://8080-a8eeb1a9-ff31-4892-8871-a8a2281c3430.ws-us02.gitpod.io';
     constructor(private http: HttpClient,) { }
     httpOptions = {
         headers: new HttpHeaders({
@@ -37,8 +37,22 @@ export class EventsService {
     );
   }
 
+  /**
+   * Gets the latest event from the DB
+   * @param getLastestEvent
+   * @param Event
+   */
 
-    
+   getLatestEvent(evt: Event): Observable<Event>{
+       return this.http.get<Event>(this.eventsUrl + "/latest")
+            .pipe(
+                tap(_ => console.log('fetched latest events')),
+                catchError(this.handleError<Event>('event'))
+            );
+   }
+
+
+
 
     /**
      * Handle Http operation that failed.
