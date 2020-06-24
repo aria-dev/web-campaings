@@ -1,0 +1,37 @@
+<div class="container-fluid">
+
+  <h2 class="leading py-15">{{title}}</h2>
+
+
+  <div *ngFor="let event of events">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6 my-auto">
+            <h3>{{event.name}}</h3>
+            <p><b>Description: </b>{{event.description}}</p>
+          </div>
+
+          <div class="col-lg-6 my-auto">
+            <h6>Details: </h6>
+            <small>
+              <p>
+                <b>Schedule: </b>{{event.date}} at {{event.time}}
+                <br>
+                <b>Location: </b>{{event.location}}
+                <br>
+                <b>Share: </b> 
+                <a href="http://localhost:4200/events/{{event.name}}">
+                  http://localhost:4200/events/{{event.name}}
+                </a>
+              </p>
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <br>
+  </div>
+</div>

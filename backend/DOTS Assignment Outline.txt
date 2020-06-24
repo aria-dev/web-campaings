@@ -1,0 +1,26 @@
+MEAN Stack
+Use EJS for completing this faster
+Mongo for DB
+ExpressJS and Node for Backend
+Angular for Frontend with BootStrap
+
+Project Details:
+Design 2 pages in Angular
+Landing page that displays Campaigns [Angular/EJS]
+Admin page to add/edit Campaigns [Express, Node, EJS, MongoDB]
+
+TODO:
+x Create a form to add new campaign (debate image functionality on time)
+x Start with a node server that by default shows the last campaign
+x Just as a feature, a list of all added campaigns will be seen in footer as links
+x Show the basic details of the campaign in the template
+x Create an admin page to show a list of campaigns
+x Save form data to mongo, and display data in the front page
+x Campaigns could be accessed with the campaign name from a url, which will be created on save!
+x Ability to delete campaigns
+x Ability to edit campaigns
+x Campaign events page for all events with redirect
+- Give image/color options for bg
+- Design the template to look good
+- Make the angular pages
+- Switch to HTTP in Backend

@@ -1,0 +1,9 @@
+<% events.forEach(function(evt){%>
+
+<h1> <a href="/events/<%= evt.name %>"><%= evt.name %></a></h1>
+<p> <%= evt.category %></p>
+<p> <%= evt.description %></p>
+<p> <%= evt.date %></p>
+<p> <%= evt.time %></p>
+<p> <%= evt.location %></p>
+<%}); %>

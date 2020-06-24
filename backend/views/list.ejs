@@ -1,0 +1,18 @@
+<a href="/dashboard/new">+ New Event</a>
+
+<div>
+    <% items.forEach(function(item){ %>
+        <div>
+            <h3>
+               <a href="/dashboard/edit/ <%= item.name %>"> <%= item.name %></a>
+            </h3>
+            <p>
+                <%= item.description%>
+                <p>
+                    Share URL: <a href="/events/<%= item.name %>">localhost:3000/events/<%= item.name %></a>    
+                </p>
+            </p>
+
+        </div>
+        <% }); %>
+</div>

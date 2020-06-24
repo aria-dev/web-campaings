@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <a class="btn btn-dark ml-auto" href="/dashboard/new"> <b>+ New Event</b> </a>
+  <br>
+  <br>
+  <h3>Event List</h3>
+  <br>
+  <div class="bg-light container-fluid">
+    <br>
+    <div *ngFor="let event of eventList">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="lead">{{event.name}}
+                <span>
+                  <small>
+                    <a class="text-muted" href="http://localhost:4200/events/{{event.name}}" target="_blank">Share Link
+                      &#x29C9; </a>
+                  </small>
+                </span>
+                <br>
+                <b>Description:</b> {{event.description}}
+              </div>
+            </div>
+            <div class="col-lg-5">
+
+            </div>
+            <div class="col-lg-1">
+              <a href="/edit/eventname" class="btn btn-dark my-auto">
+                <h2> &#8594; </h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
